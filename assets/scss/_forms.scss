@@ -1,0 +1,24 @@
+.form-container {
+  justify-content: center;
+  margin: 3em auto;
+  background-color: white;
+  padding: 3em;
+  &__login{
+    .btn-group{
+      display: block;
+      justify-content: center;
+    }
+    .input-group{
+      margin: auto;
+    }
+  }
+
+  &__register{
+    > form{
+      >button {
+        justify-self: center;
+        margin: 1em;
+      }
+    }
+  }
+}

@@ -1,0 +1,45 @@
+@media (min-width: 64em){
+  // content - container
+  .content-container{
+    margin: 5rem;
+    padding: 2rem;
+    justify-content: center;
+    background-color: $faded-white;
+  }
+  // forms
+  .form-container {
+    padding: 2rem;
+    width: 50%;
+    height: 50%;
+    > h1 {
+      font-size: $font-med;
+    }
+    &__login{
+      margin:auto;
+      height: 80%;
+    }
+  
+    &__register{
+      
+    }
+  }
+  // forms end
+}
+
+// 640px, 1024px, 1400px
+$breakpoints-up: ("medium": "40em", "large":"64em", "xlarge":"87.5em");
+
+//639px, 1023px, 1399px
+$breakpoints-down: ("small": "39.9375em", "medium": "63.9375rem", "large":"87.4375em");
+
+@mixin breakpoint-up($size){
+  @media (min-width: map-get($breakpoints-up, $size)){
+    @content;
+  }
+}
+
+@mixin breakpoint-down($size){
+  @media (max-width: map-get($breakpoints-down, $size)){
+    @content;
+  }
+}

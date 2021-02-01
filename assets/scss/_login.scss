@@ -1,0 +1,14 @@
+.content-container{
+}
+.form-container{
+  display: block;
+  justify-content: center;
+  .btn-group{
+    button{
+      margin-top: 1rem;
+      a{
+        color: $faded-white;
+      }
+    }
+  }
+}
